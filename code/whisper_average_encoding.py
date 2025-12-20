@@ -15,7 +15,6 @@ from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 from scipy.stats import zscore
 from tqdm import tqdm
-from get_bold import get_bold as load_bold_masked
 from convert_clean_h5_to_pkl import get_bold_cached
 # from util.atlas import Atlas
 from util.path import Path
@@ -141,19 +140,6 @@ def build_model(
     )
 
     return pipeline
-
-
-def get_average_sub(narrative: str):
-    return get_sub_bold(narrative).mean(0)
-
-
-def get_sub_bold(narrative: str):
-    m = 81924
-    n = len(SUBS[narrative])
-    Y_bold = np.zeros((n, TRS[narrative], m), dtype=np.float32)
-    for i, sub in enumerate(tqdm(SUBS[narrative])):
-        Y_bold[i] = get_bold(sub, narrative)
-    return Y_bold
 
 
 def encoding(

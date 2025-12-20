@@ -18,7 +18,6 @@ HFMODELS = {
     "whisper-medium": "openai/whisper-medium.en",
     # large has 32 layers with model_d = 1280
     "whisper-large": "openai/whisper-large-v3",
-    # "sentence-transformers": "sentence-transformers/all-MiniLM-L6-v2",
 }
 
 
