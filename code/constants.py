@@ -4,7 +4,7 @@ TR = {"black": 1.5, "forgot": 1.5, "piemanpni": 1.5, "bronx": 1.5}
 
 TRS = {"black": 534, "forgot": 558, "piemanpni": 267, "bronx": 358}  # after removing silences
 
-WORDS = {"black": 1544, "forgot": 2135, "piemanpni": 992, "bronx": 1379} 
+WORDS = {"black": 1544, "forgot": 2135, "piemanpni": 992, "bronx": 1379}
 
 NARRATIVE_SLICE = {
     "black": slice(8, -8),
